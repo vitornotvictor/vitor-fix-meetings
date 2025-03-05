@@ -64,6 +64,7 @@ const Navbar = () => {
           'fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out md:hidden pt-20',
           mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         )}
+        style={{ zIndex: 49 }} // Ensure it's below the nav (z-50) but above other content
       >
         <div className="container flex flex-col items-center justify-center space-y-6 py-10">
           <MobileNavLink href="#about" onClick={() => setMobileMenuOpen(false)}>About</MobileNavLink>
