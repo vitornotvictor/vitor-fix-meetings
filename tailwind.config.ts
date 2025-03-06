@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -34,7 +35,7 @@ export default {
           foreground: 'hsl(0, 0%, 100%)'
         },
         secondary: {
-          DEFAULT: 'hsl(200, 85%, 45%)',
+          DEFAULT: 'hsl(142, 76%, 36%)',
           foreground: 'hsl(0, 0%, 100%)'
         },
         destructive: {
@@ -46,7 +47,7 @@ export default {
           foreground: 'hsl(240, 10%, 40%)'
         },
         accent: {
-          DEFAULT: 'hsl(200, 85%, 45%)',
+          DEFAULT: 'hsl(142, 76%, 36%)',
           foreground: 'hsl(0, 0%, 100%)'
         },
         popover: {
