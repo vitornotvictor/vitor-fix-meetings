@@ -35,7 +35,7 @@ export default {
           foreground: 'hsl(0, 0%, 100%)'
         },
         secondary: {
-          DEFAULT: 'hsl(142, 76%, 36%)',
+          DEFAULT: 'hsl(196, 65%, 45%)',
           foreground: 'hsl(0, 0%, 100%)'
         },
         destructive: {
@@ -47,7 +47,7 @@ export default {
           foreground: 'hsl(240, 10%, 40%)'
         },
         accent: {
-          DEFAULT: 'hsl(142, 76%, 36%)',
+          DEFAULT: 'hsl(196, 65%, 45%)',
           foreground: 'hsl(0, 0%, 100%)'
         },
         popover: {

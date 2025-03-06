@@ -29,7 +29,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="section bg-secondary/50">
+    <section id="about" ref={sectionRef} className="section bg-stone-100">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="slide-up text-3xl sm:text-4xl font-bold mb-6">About Me</h2>
@@ -50,7 +50,7 @@ const About = () => {
             </div>
             
             <div className="absolute top-1/2 -right-8 transform translate-x-1/2 bg-white p-5 rounded-full shadow-lg slide-up" style={{ transitionDelay: '0.1s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
