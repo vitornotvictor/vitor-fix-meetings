@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -16,6 +15,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle clicks outside the menu
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node) && mobileMenuOpen) {
@@ -23,8 +23,13 @@ const Navbar = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, [mobileMenuOpen]);
 
   // Prevent scrolling when mobile menu is open
@@ -86,12 +91,12 @@ const Navbar = () => {
       <div 
         ref={menuRef}
         className={cn(
-          'fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out md:hidden pt-20',
+          'fixed inset-0 bg-white transition-transform duration-300 ease-in-out md:hidden pt-20',
           mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         )}
         style={{ zIndex: 49 }} 
       >
-        <div className="container flex flex-col items-center justify-center space-y-6 py-10">
+        <div className="container flex flex-col items-center justify-center space-y-6 py-10 bg-white">
           <MobileNavLink href="#about" onClick={() => setMobileMenuOpen(false)}>About</MobileNavLink>
           <MobileNavLink href="#clients" onClick={() => setMobileMenuOpen(false)}>Clients</MobileNavLink>
           <MobileNavLink href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</MobileNavLink>
