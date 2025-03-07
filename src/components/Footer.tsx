@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="py-12 bg-secondary/50">
       <div className="container-custom">
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4">Vitor Kneipp</h3>
             <p className="text-muted-foreground">
@@ -42,26 +42,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold mb-4">Subscribe</h3>
-            <p className="text-muted-foreground mb-4">
-              Join my newsletter for tips on improving your meetings and team collaboration.
-            </p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-4 py-2 rounded-l-md border border-input focus:outline-none focus:ring-2 focus:ring-primary/50"
-              />
-              <button
-                type="submit"
-                className="bg-primary text-primary-foreground px-4 py-2 rounded-r-md hover:bg-primary/90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
         
