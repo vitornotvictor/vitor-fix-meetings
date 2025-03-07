@@ -7,8 +7,13 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   base: "./", // This ensures assets are loaded correctly on GitHub Pages
   server: {
-    host: "::",
-    port: 8080,
+    host: "0.0.0.0",
+    port: 52167,
+    cors: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Security-Policy": "frame-ancestors *",
+    },
   },
   plugins: [
     react(),
